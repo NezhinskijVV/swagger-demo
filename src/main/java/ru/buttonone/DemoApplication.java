@@ -1,4 +1,4 @@
-package swagger.demo;
+package ru.buttonone;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

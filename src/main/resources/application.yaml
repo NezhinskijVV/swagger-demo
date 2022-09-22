@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+#  sql:
+#   init:
+#     mode: always # Spring Boot >=v2.5.0
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 192286
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  jpa:
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+
+
+logging:
+  level:
+    ROOT: ERROR

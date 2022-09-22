@@ -1,4 +1,4 @@
-package swagger.demo.configuration;
+package ru.buttonone.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,12 +22,13 @@ public class SwaggerConfig {
     public Docket postsApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("swagger.demo"))
+                .apis(RequestHandlerSelectors.basePackage("ru.buttonone"))
                 .paths(postPaths()).build();
     }
 
     private Predicate<String> postPaths() {
-        return or(regex("/api/posts.*"), regex("/api/javainuse.*"));
+        return or(regex("/api/books.*"),
+                regex("/api/javainuse.*"));
     }
 
     private ApiInfo apiInfo() {
