@@ -7,8 +7,8 @@ spring:
 #     mode: always # Spring Boot >=v2.5.0
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
-    username:
-    password:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
 
   mvc:
     pathmatch:
